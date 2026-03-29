@@ -1,0 +1,440 @@
+/*
+
+                *###==#+###*+**=#*+#####=#  =*#*-+*+*# ++*+=*#-#=+- +#=##+-#+*#
+               *+#***###+*###*##*#++#*##*  #*--=+*#### #+*=####+*= *:**#**###+#
+               #*#*+=#*#*####*#*+#+*#+=*: :=##   #*+# ##:*   *++#: *#-=   *#*=
+              *###*####+#*#*###*##***++#  :*+*= ##*= **#*         **=#   +*#*
+             *#+++####         +*+#**-#  =#*++#*#*#* **+: #-#*-# :-+#    =+++
+            #*#**+#=#         #+*+##*## ##*####*    +++*  :*=*++ =*#*   #**+
+           +##+**#=#         ++#*++=+*  #=+ =***   #+**=-####*# ##-#*++*=##=
+           *######*          *######+  =#**  *#*+  =#+#=+++-#* *:*--#=++#:*
+          ###*#*###         #+*#**+*
+         #*##++#*#         #+*###### =##=***+##= =+#*-*=#=:#* *+*++#=#*-*
+        #######*###=**#=###+*##+#+#  =#+*###=*** ***=+#-#=*+ #+*=+##*#===
+       *##*##*#*#*##+=#=#######++*
+       #*#*####*#*####**##+#*#*=*#
+      #*###*#**#*##*###*****#####
+     ####*##+#         #+####*+*
+    #=######+#        #####=###
+   #*###+#+*#         #+**###=#
+   ###*+*##*         ##*###*##
+  ##+#######        +####*##*
+ *
+*/
+
+/* ============================= */
+/* FONTS */
+/* ============================= */
+
+@font-face {
+  font-family: "Barlow";
+  src: url("fonts/Barlow-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "Korolev";
+  src: url("fonts/Korolev-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Monaspace Krypton";
+  src: url("fonts/Monaspace-Krypton-Var.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("fonts/Oswald-Variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Russo Argo";
+  src: url("fonts/RussoArgo.woff2") format("woff2");
+}
+
+
+/* ============================= */
+/* THEME COLORS */
+/* ============================= */
+
+.theme-dark {
+  --background-primary: #170F13;
+  --background-secondary: #0C080A;
+  color: #F2E3D5;
+}
+
+.theme-light {
+  --background-secondary: #A69587;
+  --background-primary: #F2E3D5;
+  color: #170F13;
+}
+
+
+/* ============================= */
+/* GLOBAL SETTINGS */
+/* ============================= */
+
+body {
+  line-height: 1.6;
+  --font-monospace: "Monaspace Krypton", monospace;
+}
+
+.markdown-preview-view {
+  line-height: 1.8;
+}
+
+:root {
+  --input-hover-border-color: #BF3465;
+  --bg-color: #0c080a; 
+    --surface-color: #170f13;
+    --border-color: #382029;
+    --text-main: #f2e3d5; 
+    --text-muted: #a69587;
+    --accent-red: #bf3465; 
+    --accent-red-hover: #e0457b;
+    --font-title: 'RussoArgo', "Arial Black", "Impact", sans-serif;
+    --font-headers: 'Korolev', 'Oswald', "Arial Black", "Impact", sans-serif;
+    --font-body: 'Barlow', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: 'Monaspace Krypton', "Courier New", Courier, monospace;
+    --mono-features: "calt" 1, "liga" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss04" 1, "ss05" 1, "ss06" 1, "ss07" 1, "ss08" 1, "ss09" 1, "ss10" 1;
+}
+
+
+/* ============================= */
+/* TEXT */
+/* ============================= */
+
+.markdown-rendered,
+.cm-content {
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+}
+
+
+/* ============================= */
+/* TITLES */
+/* ============================= */
+
+.inline-title,
+.markdown-rendered .inline-title,
+.cm-header-1 {
+  font-family: "Russo Argo", sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+h1,
+.markdown-rendered h1,
+.cm-header-1 {
+  font-family: "Russo Argo", sans-serif;
+}
+
+h2,
+h3,
+.cm-header-2,
+.cm-header-3 {
+  font-family: "Korolev", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+
+/* DECORATIONS */
+
+h2 {
+  border-bottom: 2px solid #BF3465;
+  padding-bottom: 4px;
+}
+
+h3 {
+  border-left: 4px solid #BF3465;
+  padding-left: 10px;
+}
+
+
+/* ============================= */
+/* TAB / NOTE TITLE */
+/* ============================= */
+
+.view-header-title {
+  font-family: "Barlow", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  
+}
+
+
+/* ============================= */
+/* SIDEBAR */
+/* ============================= */
+
+.workspace-leaf-content[data-type="file-explorer"] {
+  background-color: var(--background-secondary);
+  border-right: 2px solid #BF3465;
+}
+
+.nav-file-title {
+  font-family: "Monaspace Krypton", monospace;
+  border-left: 3px solid transparent;
+  padding: 6px 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav-file-title:hover {
+  background-color: rgba(191, 52, 101, 0.15);
+  border-left: 3px solid #BF3465;
+}
+
+.nav-file-title.is-active {
+  color: #BF3465;;
+  border: 1px dashed #BF3465;
+  border-left: 3px solid #BF3465;;
+}
+
+
+/* ============================= */
+/* TABS */
+/* ============================= */
+
+.workspace-tab-header {
+  border: 1px solid rgba(191, 52, 101, 0.4);
+  border-radius: 0;
+  margin-right: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.workspace-tab-header.is-active {
+  background-color: #BF3465;
+  color: white;
+  border: 1px solid white;
+}
+
+.workspace-tab-header:hover {
+  background-color: rgba(191, 52, 101, 0.2);
+}
+
+
+/* ============================= */
+/* CALLOUT */
+/* ============================= */
+
+.callout {
+  --callout-color: 191, 52, 101;
+  border-radius: 0;
+  background-color: rgba(191, 52, 101, 0.08);
+  border: 1px dashed rgba(191, 52, 101, 0.4);
+  border-left: 4px solid #BF3465;
+  padding: 12px;
+}
+
+.callout-title {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: bold;
+}
+
+
+/* ============================= */
+/* CODE */
+/* ============================= */
+
+pre {
+  border-radius: 0;
+  border: 1px solid rgba(191, 52, 101, 0.4);
+  background-color: #0C080A;
+  padding: 14px;
+}
+
+code {
+  font-size: 0.95em;
+  letter-spacing: 0.02em;
+}
+
+
+/* ============================= */
+/* HR */
+/* ============================= */
+
+hr {
+  border: none;
+  height: 2px;
+  background: #BF3465;
+  margin: 2em 0;
+  position: relative;
+}
+
+hr::after {
+  content: "■";
+  position: absolute;
+  right: 0;
+  top: -6px;
+  color: #BF3465;
+  font-size: 10px;
+}
+
+/* RESET LIST */
+ul {
+  list-style: none;
+  padding-left: 1.2em;
+}
+
+/* BASE */
+ul li {
+  position: relative;
+  padding-left: 1.2em;
+  margin: 4px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* NIVEAU 1 — carré */
+ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 6px;
+  height: 6px;
+  background-color: #BF3465;
+}
+
+/* NIVEAU 2 — tiret */
+ul ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 1px;
+  background-color: #BF3465;
+}
+
+/* NIVEAU 3 — point */
+ul ul ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 4px;
+  height: 4px;
+  background-color: #BF3465;
+}
+
+/* NIVEAU 4 — carré fin */
+ul ul ul ul > li::before {
+  width: 5px;
+  height: 5px;
+  border: 1px solid #BF3465;
+  background: transparent;
+}
+
+/* ============================= */
+/* IMMERSIVE SYSTEM ERRORS */
+/* ============================= */
+
+/* STYLE GLOBAL ERREUR */
+.is-broken {
+  border-left: 4px solid #BF3465 !important;
+}
+
+/* ============================= */
+/* LIENS INTERNES CASSÉS */
+/* ============================= */
+
+.internal-link.is-unresolved {
+  color: #BF3465;
+  text-decoration: none;
+  border-bottom: 1px dashed #BF3465;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+/* MESSAGE SYSTEME AU HOVER */
+.internal-link.is-unresolved:hover::after {
+  content: "[FILE NOT FOUND]";
+  position: absolute;
+  left: 0;
+  top: 1.5em;
+  font-size: 10px;
+  color: #BF3465;
+  opacity: 0.8;
+  font-family: "Monaspace Krypton", monospace;
+}
+
+
+/* ============================= */
+/* EMBEDS CASSÉS */
+/* ============================= */
+
+.markdown-embed.is-broken {
+  border: 1px dashed rgba(191, 52, 101, 0.4);
+  background-color: rgba(191, 52, 101, 0.08);
+  padding: 12px;
+  font-family: "Monaspace Krypton", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #BF3465;
+  position: relative;
+}
+
+/* MESSAGE */
+.markdown-embed.is-broken::before {
+  content: "[DATA CORRUPTED]";
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+
+/* ============================= */
+/* IMAGES MANQUANTES */
+/* ============================= */
+
+.image-embed.is-broken {
+  border: 1px dashed rgba(191, 52, 101, 0.4);
+  background-color: rgba(191, 52, 101, 0.05);
+  padding: 12px;
+  font-family: "Monaspace Krypton", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #BF3465;
+  position: relative;
+}
+
+/* MESSAGE */
+.image-embed.is-broken::before {
+  content: "[TRANSMISSION ERROR]";
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.image-embed.is-broken,
+.markdown-embed.is-broken {
+  font-size: 0;
+}
+
+.image-embed.is-broken::after {
+  content: "SIGNAL LOST";
+  font-size: 14px;
+  color: #BF3465;
+}
+
+.markdown-embed.is-broken::after {
+  content: "ACCESS DENIED";
+  font-size: 14px;
+  color: #BF3465;
+}
+*/

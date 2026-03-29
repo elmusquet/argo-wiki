@@ -1,4 +1,11 @@
 [
   "templater-obsidian",
-  "obsidian-style-settings"
+  "obsidian-style-settings",
+  "dataview",
+  "iconic",
+  "homepage",
+  "oz-image-plugin",
+  "obsidian-meta-bind-plugin",
+  "pexels-banner",
+  "yaml-table"
 ]
